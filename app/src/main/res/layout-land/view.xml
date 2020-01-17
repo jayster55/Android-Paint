@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jsketch.MainActivity"
+    android:background="@drawable/blue">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="230px"
+        android:layout_height="match_parent"
+        android:background="#212121"
+        android:baselineAligned="false"
+        android:measureWithLargestChild="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayout">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="5"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:id="@+id/tools">
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectButton"
+                    android:button="@drawable/select_button"
+                    android:checked="false" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eraseButton"
+                    android:button="@drawable/erase_button" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/circleButton"
+                    android:button="@drawable/circle_button" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rectangleButton"
+                    android:button="@drawable/rectangle_button" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/line_button"
+                    android:id="@+id/lineButton" />
+
+            </RadioGroup>
+
+        </GridLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="250dp"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="4"
+            android:layout_gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/colors">
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/blackColorButton"
+                    android:button="@drawable/black_color_button"
+                    android:checked="true" />
+
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"/>
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/redColorButton"
+                    android:button="@drawable/red_color_button" />
+
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"/>
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/greenColorButton"
+                    android:button="@drawable/green_color_button" />
+
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"/>
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/blueColorButton"
+                    android:button="@drawable/blue_color_button" />
+            </RadioGroup>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:layout_toRightOf="@id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:background="#232323">
+
+        <FrameLayout
+            android:id="@+id/canvasContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#ffffff"></FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

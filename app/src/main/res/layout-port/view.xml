@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="jsketch.MainActivity"
+    android:background="#333333">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:background="#232323"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/canvasContainer"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="230px"
+            android:background="#212121"
+            android:baselineAligned="false"
+            android:measureWithLargestChild="false"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="15dp"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:columnCount="3"
+                android:rowCount="1">
+
+                <RadioGroup
+                    android:id="@+id/tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"/>
+
+                    <RadioButton
+                        android:id="@+id/selectButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/select_button"
+                        android:checked="false" />
+
+
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"/>
+
+                    <RadioButton
+                        android:id="@+id/eraseButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/erase_button" />
+
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"/>
+
+
+                    <RadioButton
+                        android:id="@+id/circleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/circle_button" />
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"/>
+
+
+                    <RadioButton
+                        android:id="@+id/rectangleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/rectangle_button" />
+
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"/>
+
+                    <RadioButton
+                        android:id="@+id/lineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/line_button" />
+
+                </RadioGroup>
+
+            </GridLayout>
+
+            <Space
+                android:layout_width="75dp"
+                android:layout_height="15dp"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:columnCount="4"
+                android:rowCount="1">
+
+                <RadioGroup
+                    android:id="@+id/colors"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/blackColorButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:button="@drawable/black_color_button"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/redColorButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:button="@drawable/red_color_button" />
+
+                    <RadioButton
+                        android:id="@+id/greenColorButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:button="@drawable/green_color_button" />
+
+                    <RadioButton
+                        android:id="@+id/blueColorButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:button="@drawable/blue_color_button" />
+                </RadioGroup>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
